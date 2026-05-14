@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import db, { type CultivationLog, type UserSettings } from '../db'
+import db, { type CultivationLog } from '../db'
 import { cultivationCards, type CultivationCard } from '../utils/cultivationCards'
 
 interface CultivationState {

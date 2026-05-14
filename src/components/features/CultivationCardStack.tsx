@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import { Check, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react'
 import type { CultivationCard } from '../../utils/cultivationCards'
 

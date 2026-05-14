@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Plus, Bell, Clock, Trash2, X, Check } from 'lucide-react'
+import { Plus, Bell, Trash2, X, Check } from 'lucide-react'
 import { useReminderStore } from '../stores/reminderStore'
 import type { Reminder } from '../db'
 

@@ -22,7 +22,7 @@ export default function HabitsPage() {
   const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const {
-    habits, todayHabitLogs, monthHabitLogs, bowelLogs,
+    habits, todayHabitLogs, bowelLogs,
     loadHabits, loadTodayHabitLogs, loadHabitLogsForRange, loadBowelLogs,
     toggleHabit, isHabitDoneInMonth, addBowelLog,
   } = useHabitStore()

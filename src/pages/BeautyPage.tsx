@@ -22,7 +22,6 @@ export default function BeautyPage() {
   const [weightVal, setWeightVal] = useState('')
   const [weightDate, setWeightDate] = useState(today())
   const [weightNote, setWeightNote] = useState('')
-  const [prevWeight, setPrevWeight] = useState<number | null>(null)
 
   // Skin form
   const [showSkinForm, setShowSkinForm] = useState(false)
@@ -117,7 +116,7 @@ export default function BeautyPage() {
   const msDates = milestones.map((m) => m.targetDate).filter(Boolean).sort()
   const ganttMin = msDates[0] || today()
   const ganttMax = msDates[msDates.length - 1] || today()
-  const ganttRange = Math.max(7, Math.ceil((new Date(ganttMax).getTime() - new Date(ganttMin).getTime()) / 86400000) + 7)
+  Math.max(7, Math.ceil((new Date(ganttMax).getTime() - new Date(ganttMin).getTime()) / 86400000) + 7)
 
   return (
     <div className="px-5 pt-12 pb-4">
@@ -249,9 +248,7 @@ export default function BeautyPage() {
                   const tEnd = new Date(ganttMax).getTime() + 7*86400000
                   const tRange = tEnd - tStart
                   const leftPct = Math.max(0, ((new Date(m.targetDate).getTime() - tStart) / tRange) * 100)
-                  const todayTs = new Date().getTime()
-                  const progress = m.achieved ? 100 : Math.min(100, Math.max(0, Math.round(((todayTs - tStart) / (new Date(m.targetDate).getTime() - tStart)) * 100)))
-                  const overdue = !m.achieved && new Date(m.targetDate) < new Date()
+                  const overdue =!m.achieved && new Date(m.targetDate) < new Date()
                   return (
                     <div key={m.id} className="flex items-center gap-2">
                       <div className="flex items-center gap-1.5 w-28 flex-shrink-0">

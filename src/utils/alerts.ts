@@ -1,5 +1,4 @@
 import type { HabitLog, BowelLog, WeightLog, Reminder, ReminderLog } from '../db'
-import { today } from './date'
 
 export interface Alert {
   id: string
@@ -10,7 +9,6 @@ export interface Alert {
 
 export function checkBowelsAlerts(bowelLogs: BowelLog[]): Alert[] {
   const alerts: Alert[] = []
-  const now = Date.now()
   // Find consecutive days without bowel movement
   const dates = bowelLogs
     .map((l) => new Date(l.datetime).toISOString().slice(0, 10))
@@ -79,7 +77,6 @@ export function checkHabitAlerts(
   habitLogs: HabitLog[]
 ): Alert[] {
   const alerts: Alert[] = []
-  const todayStr = today()
 
   for (const habit of habits) {
     // Find last 3 days completions

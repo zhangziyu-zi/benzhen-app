@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import db, { type WeightLog, type SkinLog, type Milestone, type UserSettings } from '../db'
+import db, { type WeightLog, type SkinLog, type Milestone } from '../db'
 
 interface BeautyState {
   weightLogs: WeightLog[]

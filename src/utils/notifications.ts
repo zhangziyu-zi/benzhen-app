@@ -21,7 +21,7 @@ export function sendReminderNotification(reminder: Reminder, time: string) {
     tag: `reminder-${reminder.id}-${time}`,
     requireInteraction: true,
     vibrate: [200, 100, 200],
-  })
+  } as NotificationOptions)
 
   notif.onclick = () => {
     window.focus()

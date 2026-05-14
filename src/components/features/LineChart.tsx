@@ -109,7 +109,7 @@ export default function LineChart({ series, width = 320, height = 180, markDates
       ))}
 
       {/* Lines */}
-      {series.map((s, si) => {
+      {series.map((s, _) => {
         if (s.data.length < 2) return null
         const points = s.data
           .map((d) => `${toX(d.date)},${toY(d.value)}`)

@@ -196,7 +196,7 @@ export default function HomePage() {
           </div>
         ) : (
           <div className="space-y-2">
-            {activeItems.slice(0, 3).map((item, i) => (
+            {activeItems.slice(0, 3).map((item) => (
               <div
                 key={`${item.reminder.id}-${item.time}`}
                 className="bg-card rounded-xl p-4 flex items-center gap-3"
