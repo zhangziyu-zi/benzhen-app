@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FAF8F5;
+  --color-card: #FFFFFF;
+  --color-text: #2C2416;
+  --color-text-muted: #8B7E6A;
+  --color-accent: #9CAF88;
+  --color-accent-warm: #C4A49A;
+  --color-success: #6B8E5A;
+  --color-reminder: #C8956C;
+  --color-border: #E8E3DB;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC",
+    "Source Han Sans CN", sans-serif;
+  color: #2C2416;
+  background: #FAF8F5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+}
+
+/* Number tabular */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth page transition */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
